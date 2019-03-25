@@ -5,18 +5,14 @@ s.summary      = 'Baidu Push SDK for iOS.'
 s.homepage     = 'https://github.com/heenying/BpushSDK'
 s.license      = { :type => 'Copyright', :text => 'LICENSE ©2015-2017 Baidu, Inc. All rights reserved' }
 s.author       = { 'heenying' => 'https://github.com/heenying' }
-s.source       = { :https => 'https://github.com/heenying/BpushSDK.git' }
+s.source       = { :http => 'https://github.com/heenying/BpushSDK.git' }
 
 s.ios.deployment_target = '8.0'
 s.frameworks = 'Foundation','CoreTelephony','SystemConfiguration'
 s.requires_arc = false
-s.default_subspecs = 'normal'
-
-s.subspec 'normal' do |sp|
-sp.source_files = 'LibBDPush/*.h'
-sp.public_header_files = 'LibBDPush/*.h'
-sp.vendored_libraries = 'LibBDPush/*.a'
-sp.frameworks = 'Foundation','CoreTelephony','SystemConfiguration'
-end
+s.source_files = 'LibBDPush/*.h'
+s.public_header_files = 'LibBDPush/*.h'
+s.vendored_libraries = 'LibBDPush/*.a'
+s.frameworks = 'Foundation','CoreTelephony','SystemConfiguration'
 
 end
